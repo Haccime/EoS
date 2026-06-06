@@ -5,7 +5,7 @@ public class MainCLI {
     public static void main(String[] args) {
 	int count = 0;
 	Cart cart = new Cart();
-	Inventory inventory = new Inventory ();
+	Inventory inventory = new Inventory();
 
 	cart.addItem(inventory.getAll().get(0));
 	cart.addItem(inventory.getAll().get(1));

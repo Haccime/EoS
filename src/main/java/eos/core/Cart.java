@@ -25,7 +25,4 @@ public class Cart {
 
 	return total;
     }
-
-    public void checkout () {
-    }
 }
