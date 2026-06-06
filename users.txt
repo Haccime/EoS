@@ -1,0 +1,2 @@
+admin,111,ADMIN
+cust,222,CUSTOMER
