@@ -13,4 +13,5 @@ public class Inventory {
     public ArrayList<Product> getAll() {
 	return products;
     }
+
 }
