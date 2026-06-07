@@ -3,7 +3,7 @@ import java.io.*;
 import java.util.*;
 
 public class ProductFileRead {
-    private static final String FILE = "products.txt";
+    private static final String FILE = "data/products.txt";
 
     public static List<Product> loadProducts() {
 	List<Product> products = new ArrayList<>();

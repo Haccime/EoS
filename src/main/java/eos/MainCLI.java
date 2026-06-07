@@ -1,21 +1,23 @@
 package eos;
 import eos.core.*;
+import java.util.*;
 
 public class MainCLI {
     public static void main(String[] args) {
-	int count = 0;
+	Inventory inventory = new Inventory();
 	Cart cart = new Cart();
-	Inventory inventory = new Inventory ();
 
+	// test adding to cart
 	cart.addItem(inventory.getAll().get(0));
 
-	System.out.println("Total: RM" + cart.getTotal());
+	// test save cart
+	CartFileRead.saveCart( cart.getItems(), "testuser");
+	System.out.println("Cart saved");
 
-	for ( Product p : cart.getItems()) {
-	    count++;
-	    System.out.print(count + " ");
-	    System.out.println(p.getName());
+	// test load cart
+	List<Product> loaded = CartFileRead.loadCart("testuser");
+	for (Product p : loaded) {
+	    System.out.println(p.getName() + " " + p.getPrice());
 	}
-
     }
 }
