@@ -11,13 +11,20 @@ public class MainCLI {
 	cart.addItem(inventory.getAll().get(0));
 
 	// test save cart
-	CartFileRead.saveCart( cart.getItems(), "testuser");
+	CartFileHandler.saveCart( cart.getItems(), "testuser");
 	System.out.println("Cart saved");
 
 	// test load cart
-	List<Product> loaded = CartFileRead.loadCart("testuser");
+	List<Product> loaded = CartFileHandler.loadCart("testuser");
 	for (Product p : loaded) {
 	    System.out.println(p.getName() + " " + p.getPrice());
 	}
+
+	// Testing order class
+	List<Product> items = new ArrayList<>();
+	items.add(inventory.getAll().get(0));
+	Order order = new Order("testuser", items, 2.00);
+	OrderFileHandler.saveOrder(order);
+	System.out.println("Order saved");
     }
 }

@@ -5,7 +5,7 @@ public class Inventory {
     private ArrayList<Product> products;
 
     public Inventory () {
-	products = new ArrayList<>(ProductFileRead.loadProducts());
+	products = new ArrayList<>(ProductFileHandler.loadProducts());
     }
 
     public ArrayList<Product> getAll() {
@@ -14,19 +14,19 @@ public class Inventory {
 
     public void addProduct(Product p) {
 	products.add(p);
-	ProductFileRead.saveProducts(products);
+	ProductFileHandler.saveProducts(products);
     }
 
     public void removeProduct(String code) {
 	products.removeIf(p -> p.getCode().equals(code));
-	ProductFileRead.saveProducts(products);
+	ProductFileHandler.saveProducts(products);
     }
 
     public void addStock(String code, int quantity) {
 	for (Product p : products) {
 	    if (p.getCode().equals(code)) {
 		p.addStock(quantity);
-		ProductFileRead.saveProducts(products);
+		ProductFileHandler.saveProducts(products);
 		break;
 	    }
 	}
@@ -36,7 +36,7 @@ public class Inventory {
     for (Product p : products) {
         if (p.getCode().equals(code)) {
             p.reduceStock(quantity);
-            ProductFileRead.saveProducts(products);
+            ProductFileHandler.saveProducts(products);
             break;
         }
     }

@@ -2,7 +2,7 @@ package eos.core;
 import java.io.*;
 import java.util.*;
 
-public class CartFileRead {
+public class CartFileHandler {
 
     private static String cartPath ( String username ) {
 	return "data/carts/" + username + ".txt";

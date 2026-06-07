@@ -2,7 +2,7 @@ package eos.core;
 import java.io.*;
 import java.util.*;
 
-public class ProductFileRead {
+public class ProductFileHandler {
     private static final String FILE = "data/products.txt";
 
     public static List<Product> loadProducts() {
