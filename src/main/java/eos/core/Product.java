@@ -25,4 +25,12 @@ public class Product {
     public String getCode() { return code; }
     public double getPrice() { return price; }
     public int getAvailability() { return stock; }
+
+    public void reduceStock ( int quantity ) {
+	this.stock -= quantity;
+    }
+
+    public void addStock ( int quantity ) {
+	this.stock += quantity;
+    }
 }

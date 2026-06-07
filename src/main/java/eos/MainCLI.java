@@ -8,7 +8,6 @@ public class MainCLI {
 	Inventory inventory = new Inventory ();
 
 	cart.addItem(inventory.getAll().get(0));
-	cart.addItem(inventory.getAll().get(1));
 
 	System.out.println("Total: RM" + cart.getTotal());
 
