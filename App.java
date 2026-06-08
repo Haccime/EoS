@@ -75,20 +75,19 @@ public class App extends Application {
 
             } 
             else if (role.equalsIgnoreCase("ADMIN")) {
+                Admin admNew = new Admin(user, pass);
                 //adminScene();      // method that loads Admin UI
 
             } 
             else if (role.equalsIgnoreCase("CUSTOMER")) {
+                Customer custNew = new Customer(user, pass);
                 //customerScene();   // method that loads Customer UI
             }
         });
         
         regButton.setOnAction(e -> {
             String user = username.getText().trim();
-            String pass = password.getText().trim();
-            
-            Customer custNew = new Customer(user, pass);
-            
+            String pass = password.getText().trim();            
             
             if (user.isEmpty() || pass.isEmpty()) {
                 Alert alert = new Alert(Alert.AlertType.ERROR);
