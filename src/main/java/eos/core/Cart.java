@@ -1,11 +1,17 @@
+/* Written By
+ * DEN MUHAMMAD HAKIM BIN JUMAATUDEN 2514781
+ */
+
 package eos.core;
-import java.util.ArrayList;
+import java.time.LocalDateTime;
+import java.util.*;
+import java.time.format.DateTimeFormatter;
 
 public class Cart {
-    private ArrayList<Product> items;
+    private final ArrayList<Product> items;
 
-    public Cart () {
-	items = new ArrayList<>();
+    public Cart ( List<Product> items ) {
+	this.items = new ArrayList<>(items);
     }
 
     public void addItem (Product product) {
@@ -38,6 +44,11 @@ public class Cart {
     }
 
     public void checkout ( Inventory inventory, String username) {
+	DateTimeFormatter formatter = DateTimeFormatter.ofPattern("dd/MM/yyyy HH:mm");
+	String timestamp = LocalDateTime.now().format(formatter);
+	Order order = new Order(username, new ArrayList<>(items), getTotal(), timestamp);
+
+	OrderFileHandler.saveOrder(order);
 	for ( Product p : items ) {
 	    inventory.reduceStock(p.getCode(), 1);
 	}

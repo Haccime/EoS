@@ -1,3 +1,7 @@
+/* Written By
+ * DEN MUHAMMAD HAKIM BIN JUMAATUDEN 2514781
+ */
+
 package eos.core;
 import java.io.*;
 import java.util.*;
@@ -10,6 +14,10 @@ public class CartFileHandler {
 
     public static List<Product> loadCart ( String username ) {
 	List<Product> items = new ArrayList<>();
+
+	File file = new File(cartPath(username));
+	if (!file.exists()) return items;
+
 	try (BufferedReader br = new BufferedReader(new FileReader(cartPath(username)))) {
 	    String line;
 	    while ((line = br.readLine()) != null) {
@@ -34,5 +42,4 @@ public class CartFileHandler {
 	    e.printStackTrace();
 	}
     }
-
 }

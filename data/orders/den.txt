@@ -1,0 +1,31 @@
+F01,Dates,2.0
+F01,Dates,2.0
+F01,Dates,2.0
+TOTAL,6.0,08/06/2026 22:50
+---
+F02,Apple,1.0
+F02,Apple,1.0
+TOTAL,2.0,08/06/2026 22:50
+---
+F01,Dates,2.0
+F01,Dates,2.0
+F01,Dates,2.0
+F01,Dates,2.0
+F01,Dates,2.0
+F01,Dates,2.0
+F01,Dates,2.0
+F01,Dates,2.0
+F01,Dates,2.0
+F01,Dates,2.0
+TOTAL,20.0,08/06/2026 23:22
+---
+F01,Dates,2.0
+F01,Dates,2.0
+F01,Dates,2.0
+F01,Dates,2.0
+F01,Dates,2.0
+F01,Dates,2.0
+F01,Dates,2.0
+F01,Dates,2.0
+TOTAL,16.0,08/06/2026 23:27
+---

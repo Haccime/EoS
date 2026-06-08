@@ -1,3 +1,7 @@
+/* Written By
+ * DEN MUHAMMAD HAKIM BIN JUMAATUDEN 2514781
+ */
+
 package eos.core;
 import java.io.*;
 import java.util.*;

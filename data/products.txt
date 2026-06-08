@@ -1,1 +1,11 @@
-Dates,F01,2.00,50
+Olive Siwak,H01,5.0,20
+Neem Siwak,H02,4.5,15
+Siwak Oud El-Arak,H03,10.0,10
+Attar Perfume Rose,H11,15.0,10
+Attar Perfume Sandalwood,H12,17.0,12
+Attar Perfume Amber,H13,20.0,14
+Honey Stick,F11,2.0,50
+Honey Jar,F12,43.0,43
+Habbatussauda Powder,F15,8.5,32
+Yusuf Taiyoob Safiya Dates,F01,18.0,30
+Yusuf Taiyoob Ajwa Dates,F02,30.0,18
