@@ -13,6 +13,13 @@ public class Order {
         this.total = total;
         this.timestamp = java.time.LocalDateTime.now().toString();
     }
+    
+    public Order(String username, List<Product> items, double total, String timestamp) {
+    this.username = username;
+    this.items = items;
+    this.total = total;
+    this.timestamp = timestamp;
+}
 
     // Getters
     public String getUsername() { return username; }
